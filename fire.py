@@ -7,7 +7,7 @@ import unicornhat as unicorn
 
 unicorn.set_layout(unicorn.AUTO)
 unicorn.rotation(180)
-unicorn.brightness(.7)
+unicorn.brightness(.8)
 u_width,u_height=unicorn.get_shape()
 
 palette = [
