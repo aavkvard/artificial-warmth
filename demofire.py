@@ -23,7 +23,6 @@ palette = [
 
 board = [[0 for i in range(8)] for j in range(8)]
 pattern = [[-1,-1],[0,-1],[1,-1],[0,0]]
-#pattern = [[-1,0],[0,0],[1,0],[0,-1]]
 
 def getavg(x,y):
     colorsum = 0
@@ -40,7 +39,7 @@ def getavg(x,y):
 while True:
 
     board[random.randrange(8)][0] = random.randrange(1)+7
-    board[random.randrange(8)][0] = random.randrange(5)
+    board[random.randrange(8)][0] = random.randrange(2)+2
 
     for y in range(1,u_height):
         for x in range(u_width):
