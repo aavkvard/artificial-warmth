@@ -12,6 +12,8 @@ u_width,u_height=unicorn.get_shape()
 
 palette = [
 	(0x00,0x00,0x00),
+	(0x00,0x00,0x00),
+	(0x00,0x00,0x00),
 	(0x45,0x00,0x00),
 	(0x5d,0x1a,0x00),
 	(0x83,0x25,0x00),
@@ -33,7 +35,7 @@ def getavg(x,y):
         elif tx < 0:
             tx = (len(board)-1)+tx
         colorsum += board[tx][ty]
-    coloravg = int(colorsum/(len(pattern)))
+    coloravg = colorsum//(len(pattern))
     return coloravg
 
 while True:

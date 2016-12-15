@@ -21,12 +21,16 @@ palette = [
 	(0xff,0xc6,0x36),
 ]
 
-board = [[0 for i in range(8)] for j in range(8)]
+board = [[7 for i in range(8)] for j in range(8)]
 
 while True:
 
-    board[random.randrange(8)][0] = random.randrange(1)+6
-    board[random.randrange(8)][random.randrange(1)] = random.randrange(3)+3
+#    if random.randrange(5) == 1:
+#            board[random.randrange(8)][0] = 7
+#            board[random.randrange(8)][0] = 7
+
+    board[random.randrange(8)][random.randrange(1)] = random.randrange(1)+6
+    board[random.randrange(8)][random.randrange(2)] = random.randrange(3)+3
 
     for y in range(1,u_height):
         for x in range(u_width):
@@ -37,6 +41,8 @@ while True:
                 tx = 7+tx
             if board[tx][y-1] > 0:
                 board[x][y] = board[tx][y-1]-1
+            else:
+                board[x][y] = 0
 
     for y in range(u_height):
         for x in range(u_width):
