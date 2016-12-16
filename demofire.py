@@ -23,7 +23,7 @@ palette = [
 	(0xff,0xc6,0x36),
 ]
 
-board = [[0 for i in range(8)] for j in range(8)]
+board = [[0 for i in range(u_height)] for j in range(u_width)]
 pattern = [[-1,-1],[0,-1],[1,-1],[0,0]]
 
 def getavg(x,y):
@@ -38,10 +38,11 @@ def getavg(x,y):
     coloravg = colorsum//(len(pattern))
     return coloravg
 
+
 while True:
 
-    board[random.randrange(8)][0] = random.randrange(1)+7
-    board[random.randrange(8)][0] = random.randrange(2)+2
+    board[random.randrange(len(board))][0] = random.randrange(6)+2
+    board[random.randrange((len(board)))][0] = random.randrange(4)+3
 
     for y in range(1,u_height):
         for x in range(u_width):
@@ -53,6 +54,5 @@ while True:
             unicorn.set_pixel(x, y, r, g, b)
 
     unicorn.show()
-
     time.sleep(0.01)
 

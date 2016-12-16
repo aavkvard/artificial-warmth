@@ -1,0 +1,11 @@
+[Unit]
+Description=Fire effect for your Raspberry Pi and Unicorn HAT
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python /home/alarm/artificial-warmth/demofire.py
+
+[Install]
+WantedBy=multi-user.target
+
