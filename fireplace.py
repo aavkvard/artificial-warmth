@@ -10,10 +10,8 @@ except ImportError:
     from unicorn_hat_sim import unicornhathd as unicorn
 
 unicorn.set_layout(unicorn.AUTO)
-unicorn.rotation(180)
 unicorn.brightness(.8)
-#u_width,u_height=unicorn.get_shape()
-u_width,u_height=(8,8)
+u_width,u_height=unicorn.get_shape()
 
 palette = [
 	(0x00,0x00,0x00),
