@@ -32,6 +32,7 @@ def create_palette(fromcolor,tocolor,steps):
 
 palette = create_palette((0x30,0x00,0x00),(0xff,0xc6,0x26),u_height)
 
+# a static palette for the standard Unicorn Hat
 #palette = [
 #	(0x00,0x00,0x00),
 #	(0x00,0x00,0x00),
@@ -45,7 +46,6 @@ palette = create_palette((0x30,0x00,0x00),(0xff,0xc6,0x26),u_height)
 #	(0xff,0xc6,0x36),
 #]
 
-print(palette)
 board = [[0 for i in range(u_height)] for j in range(u_width)]
 pattern = [[-1,-1],[0,-1],[1,-1],[0,0]]
 
