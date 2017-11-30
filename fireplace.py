@@ -4,8 +4,11 @@ import time
 import random
 import numpy
 
-#from unicorn_hat_sim import unicornhat as unicorn
-import unicornhat as unicorn
+try:
+    import unicornhat as unicorn
+except ImportError:
+    from unicorn_hat_sim import unicornhat as unicorn
+
 
 unicorn.set_layout(unicorn.AUTO)
 #unicorn.rotation(180)
