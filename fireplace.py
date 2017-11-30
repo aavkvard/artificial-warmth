@@ -2,12 +2,12 @@
 
 import time
 import random
-import numpy
 
 try:
     import unicornhat as unicorn
 except ImportError:
     from unicorn_hat_sim import unicornhat as unicorn
+    #unicorn.rotation(180)
 
 
 unicorn.set_layout(unicorn.AUTO)
@@ -66,8 +66,9 @@ def getavg(x,y):
 
 while True:
 
+    board[random.randrange(len(board))][0] = u_height-1
     board[random.randrange(len(board))][0] = random.randrange(u_height//2)+u_height//4
-    board[random.randrange((len(board)))][0] = random.randrange(u_height//2)+u_height//5
+    board[random.randrange(len(board))][0] = random.randrange(u_height//2)+u_height//5
 
     for y in range(1, u_height):
         for x in range(u_width):
