@@ -7,11 +7,10 @@ try:
     import unicornhat as unicorn
 except ImportError:
     from unicorn_hat_sim import unicornhat as unicorn
-    #unicorn.rotation(180)
+    unicorn.rotation(180)
 
 
 unicorn.set_layout(unicorn.AUTO)
-#unicorn.rotation(180)
 unicorn.brightness(.8)
 u_width,u_height=unicorn.get_shape()
 
